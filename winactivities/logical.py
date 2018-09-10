@@ -95,8 +95,11 @@ class VolumeProcessor(object):
 
         Params:
             file_io (FileIO): I file like object representing a volume.
-            temp_dir (unicode): The location to extract files to
-            description (unicode): The label for this LogicalEnumerator
+            description (unicode): description of the volume
+            temp_location (unicode): The location to extract files to
+            cleanup (bool): Remove the temp folder after processesing
+            output_template (unicode): The output template.
+            dump_db (bool): True = Dump all database tables.
         """
         self.file_io = file_io
         self.description = description
